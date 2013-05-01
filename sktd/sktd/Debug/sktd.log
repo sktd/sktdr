@@ -1,0 +1,40 @@
+﻿Build started 2013-05-01 13:21:20.
+     1>Project "D:\Studia\Semestr II\PO\sktd\sktd\sktd.vcxproj" on node 2 (Build target(s)).
+     1>InitializeBuildStatus:
+         Creating "Debug\sktd.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         D:\Programy\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ID:\sfml\debug\SFML\include /ZI /nologo /W3 /WX- /Od /Oy- /D SFML_STATIC /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt game_engine.cpp game_window.cpp main.cpp map.cpp
+         main.cpp
+         Generating Code...
+         Skipping... (no relevant changes detected)
+         map.cpp
+         game_window.cpp
+         game_engine.cpp
+       Link:
+         D:\Programy\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Studia\Semestr II\PO\sktd\Debug\sktd.exe" /INCREMENTAL /NOLOGO /LIBPATH:D:\sfml\debug\SFML\lib "sfml-system-s-d.lib" "sfml-window-s-d.lib" "sfml-graphics-s-d.lib" "sfml-main-d.lib" "sfml-network-s-d.lib" "sfml-audio-s-d.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\Studia\Semestr II\PO\sktd\Debug\sktd.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Studia\Semestr II\PO\sktd\Debug\sktd.lib" /MACHINE:X86 Debug\buttons.obj
+         Debug\continue_game.obj
+         Debug\end_game.obj
+         Debug\entities.obj
+         Debug\game_engine.obj
+         Debug\game_window.obj
+         Debug\immovable.obj
+         Debug\main.obj
+         Debug\map.obj
+         Debug\menu.obj
+         Debug\mobs.obj
+         Debug\movable.obj
+         Debug\new_game.obj
+         Debug\player_console.obj
+         Debug\projectiles.obj
+         Debug\tiles.obj
+         Debug\towers.obj
+         Debug\window.obj
+         sktd.vcxproj -> D:\Studia\Semestr II\PO\sktd\Debug\sktd.exe
+       FinalizeBuildStatus:
+         Deleting file "Debug\sktd.unsuccessfulbuild".
+         Touching "Debug\sktd.lastbuildstate".
+     1>Done Building Project "D:\Studia\Semestr II\PO\sktd\sktd\sktd.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:02.38
