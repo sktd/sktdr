@@ -8,8 +8,9 @@ namespace map
 	{
 	public:
 		mobs(double px, double py, std::string s, double vel, double hlth, int wrth);
+		mobs(double px, double py, std::string s, double vel, double hlth, int wrth, std::vector <mobs> &mobs_list);
 		~mobs(void);
-		void draw(sf::RenderWindow &win);
+	//	void draw(sf::RenderWindow &win);
 		void reduce_health(double how_many);
 	private:
 		double health;

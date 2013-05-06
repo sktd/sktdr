@@ -8,6 +8,7 @@ namespace map
 	{
 	public:
 		tiles(double px, double py, std::string s, int tp);
+		tiles();
 		~tiles(void);
 		void draw(sf::RenderWindow &win);
 	private:

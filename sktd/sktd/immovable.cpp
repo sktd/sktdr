@@ -12,3 +12,7 @@ ent::immovable::immovable(double px, double py, std::string s)
 ent::immovable::~immovable(void)
 {
 }
+
+ent::immovable::immovable()
+{
+}

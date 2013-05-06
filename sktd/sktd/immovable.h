@@ -7,6 +7,7 @@ namespace ent
 	{
 	public:
 		immovable(double px, double py, std::string s);
+		immovable();
 		~immovable(void);
 	};
 }

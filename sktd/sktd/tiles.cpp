@@ -15,3 +15,7 @@ void map::tiles::draw(sf::RenderWindow &win)
 {
 	win.draw(sp);
 }
+
+map::tiles::tiles()
+{
+}

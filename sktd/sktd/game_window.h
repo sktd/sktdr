@@ -15,6 +15,8 @@ namespace engine
 		map::map map1;
 		player_console console;
 		void handling_control();
+	private:
+		sf::Clock clock;
 	};
 }
 

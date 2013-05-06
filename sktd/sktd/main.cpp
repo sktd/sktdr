@@ -5,26 +5,40 @@
 #include <string>
 int main()
 {
-	menu::menu m1(800, 600, 32, 3, "SKTD", 200, 10, 130, 250, "p1.png", "p1.png", "p1.png", "ob.bmp");
-	m1.navigate();
-
-	//engine::game_window gw(800, 600, 32, 1, "SKTD");
-	//gw.map1.begin_wave(10,100,"pacman.bmp",1,1,1,4);
-	//gw.handling_control();
+	/*menu::menu m1(800, 600, 32, 3, "SKTD", 200, 10, 130, 250, "p1.png", "p1.png", "p1.png", "ob.bmp");
+	m1.navigate();*/
+	//sf::Image im;
+	/*im.loadFromFile("pocisk.bmp");
+	im.createMaskFromColor(sf::Color::Black);
+	im.saveToFile("pocisk.png");*/
+	engine::game_window gw(800, 600, 32, 1, "SKTD");
+	//gw.map1.begin_wave(10,10,"pacman.bmp",0.01,1,1,4);
+	//gw.map1.build_tower(300, 300, "t1.bmp", 2,2);
+	gw.handling_control();
 
 	/*sf::RenderWindow win(sf::VideoMode(800,600,32),"SKTD");
+
+	sf::Font f;
+	f.loadFromFile("Andale_Mono.ttf");
+	sf::Text tekst("10", f, 30);
+	tekst.setColor(sf::Color::White);
+
+	sf::Clock clock;
 	std::vector <map::mobs> mob_list;
 	std::vector<map::mobs>::iterator itm;
 	itm=mob_list.begin();
 	map::mobs a(200, 100, "pacman.bmp", 1, 1, 1);
-	mob_list.insert(itm, a);
+	mob_list.insert(itm,5, a);
 	int x=0;
 	itm=mob_list.begin();
 	while(itm!=mob_list.end()){
 			(*itm).move(x,0);
 			++itm;
 			x+=30;
+			clock.restart();
+		
 	}
+
 	while(win.isOpen())
 	{
 		sf::Event ev;
@@ -33,13 +47,18 @@ int main()
 			if( ev.type == sf::Event::KeyPressed && ev.key.code == sf::Keyboard::Escape )
 				win.close();
 		}
-		win.clear(sf::Color::Black);
 		itm=mob_list.begin();
-		while(itm!=mob_list.end()){
-			(*itm).move(0.1,0);
-			(*itm).draw(win);
-			++itm;
+		win.clear(sf::Color::Black);
+		if(int(clock.getElapsedTime().asSeconds())>5){
+			while(itm!=mob_list.end()){
+				(*itm).move(0.1,0);
+				(*itm).draw(win);
+				++itm;
+			}
 		}
+
+		win.draw(tekst);
+
 		win.display();
 	}*/
 
