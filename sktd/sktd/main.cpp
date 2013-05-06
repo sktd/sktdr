@@ -7,10 +7,10 @@ int main()
 {
 	/*menu::menu m1(800, 600, 32, 3, "SKTD", 200, 10, 130, 250, "p1.png", "p1.png", "p1.png", "ob.bmp");
 	m1.navigate();*/
-	//sf::Image im;
-	/*im.loadFromFile("pocisk.bmp");
+	/*sf::Image im;
+	im.loadFromFile("t2.bmp");
 	im.createMaskFromColor(sf::Color::Black);
-	im.saveToFile("pocisk.png");*/
+	im.saveToFile("t2.png");*/
 	engine::game_window gw(800, 600, 32, 1, "SKTD");
 	//gw.map1.begin_wave(10,10,"pacman.bmp",0.01,1,1,4);
 	//gw.map1.build_tower(300, 300, "t1.bmp", 2,2);

@@ -15,6 +15,8 @@ map::map::map(void)
 		buildable[i]=*wsk;
 		x2+=40;
 	}
+	
+	chosen=buildable;
 }
 
 
@@ -40,6 +42,7 @@ void map::map::begin_wave(double px, double py, std::string s, double vel, doubl
 
 void map::map::end_wave()
 {
+
 }
 
 void map::map::load_level(){
@@ -52,11 +55,14 @@ void map::map::build_tower(double px, double py, std::string s, double spd, int 
 }
 
 void map::map::display(sf::RenderWindow &win){
+
 	for(int i=0;i<height*width;i++)
 		track[i].draw(win);
 	
-	for(int i=0;i<build;i++)
-		buildable[i].draw(win);
+	for(int i=0;i<build;i++){
+		if(buildable[i].get_type()!=0)
+			buildable[i].draw(win);
+	}
 
 	itm=mobs_list.begin();
 	if(itm!=mobs_list.end()&&(*itm).get_pos_x()>get_end_x()){
@@ -70,6 +76,8 @@ void map::map::display(sf::RenderWindow &win){
 		++itm;
 	}
 
+	if((*chosen).get_type()!=0)
+		(*chosen).draw2(win);
 
 	itt=towers_list.begin();
 	while(itt!=towers_list.end()){
@@ -77,7 +85,6 @@ void map::map::display(sf::RenderWindow &win){
 		(*itt).fire();
 		++itt;
 	}
-
 }
 
 double map::map::get_start_x()
@@ -98,4 +105,30 @@ double map::map::get_end_x()
 double map::map::get_end_y()
 {
 	return track[width*height-1].get_pos_y();
+}
+
+double map::map::get_chosen_x()
+{
+	return (*chosen).get_pos_x()-10;
+}
+
+double map::map::get_chosen_y()
+{
+	return (*chosen).get_pos_y()-10;
+}
+
+void map::map::move_chosen_l()
+{
+	if(chosen!=&buildable[0])
+		chosen--;
+	else
+		chosen=&buildable[build-1];
+}
+
+void map::map::move_chosen_r()
+{
+	if(chosen!=&buildable[build-1])
+		chosen++;
+	else
+		chosen=&buildable[0];
 }

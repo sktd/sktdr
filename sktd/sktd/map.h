@@ -21,6 +21,10 @@ namespace map
 		double get_start_y();
 		double get_end_x();
 		double get_end_y();
+		double get_chosen_x();
+		double get_chosen_y();
+		void move_chosen_r();
+		void move_chosen_l();
 	private:
 		const static int width=3;
 		const static int height=6;
@@ -31,6 +35,7 @@ namespace map
 		std::vector<towers>::iterator itt;
 		tiles track[width*height];
 		tiles buildable[build];
+		tiles * chosen;
 	};
 }
 

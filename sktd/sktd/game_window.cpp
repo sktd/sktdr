@@ -27,11 +27,15 @@ void engine::game_window::handling_control()
 			if( ev.type == sf::Event::KeyPressed && ev.key.code == sf::Keyboard::Escape )
 				win.close();
 			if( ev.type == sf::Event::KeyPressed && ev.key.code == sf::Keyboard::Num1 )
-				map1.build_tower(50,50,"t1.png",100,20);
+				map1.build_tower(map1.get_chosen_x(),map1.get_chosen_y(),"t1.png",100,20);
 			if( ev.type == sf::Event::KeyPressed && ev.key.code == sf::Keyboard::Num2 )
-				map1.build_tower(80,50,"t2.png",100,20);
+				map1.build_tower(map1.get_chosen_x(),map1.get_chosen_y(),"t2.png",100,20);
 			if( ev.type == sf::Event::KeyPressed && ev.key.code == sf::Keyboard::Num3 )
-				map1.build_tower(110,50,"t3.png",100,20);
+				map1.build_tower(map1.get_chosen_x(),map1.get_chosen_y(),"t3.png",100,20);
+			if( ev.type == sf::Event::KeyPressed && ev.key.code == sf::Keyboard::Right )
+				map1.move_chosen_r();
+			if( ev.type == sf::Event::KeyPressed && ev.key.code == sf::Keyboard::Left )
+				map1.move_chosen_l();
 		
 		}
 		if(clock.getElapsedTime().asMilliseconds()==2000)
