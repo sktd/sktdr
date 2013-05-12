@@ -10,18 +10,20 @@ namespace menu
 		public engine::window
 	{
 	public:
-		menu(int w, int h, int cd, int style, std::string t, double px, double py1, double py2, double py3, std::string s1, std::string s2, std::string s3,std::string s4);
+		menu(int w, int h, int cd, int style, std::string t, double px, double py1, double py2, double py3, std::string s1, std::string s2, std::string s3);
 		~menu(void);
 		void display();
-		void navigate(/*sf::RenderWindow &win*/);
+		void handling_control(int &game_state);
 	private:
-		menu::continue_game p1;
-		menu::end_game p2;
-		menu::new_game p3;
+		menu::new_game p1;
+		menu::continue_game p2;
+		menu::end_game p3;
+		sf::Text title;
 		sf::Texture selt;
 		sf::Sprite sels;
 		int choice;
-		menu::buttons *ch;
+		menu::buttons *chosen;
+		sf::Font font;
 	};
 }
 

@@ -10,3 +10,11 @@ engine::window::window(int width, int height, int color_depth, int style, std::s
 engine::window::~window(void)
 {
 }
+
+bool engine::window::isOpen()
+{
+	if(win.isOpen())
+		return true;
+	else
+		return false;
+}

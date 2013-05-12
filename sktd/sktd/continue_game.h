@@ -9,7 +9,7 @@ namespace menu
 	public:
 		continue_game(double px, double py, std::string s);
 		~continue_game(void);
-		void push();
+		void push(sf::RenderWindow &win, int &game_state);
 		/*void draw(sf::RenderWindow win);*/
 	};
 }

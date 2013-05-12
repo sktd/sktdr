@@ -15,7 +15,7 @@ menu::continue_game::~continue_game(void)
 //	win.draw(sp);
 //}
 
-void menu::continue_game::push()
+void menu::continue_game::push(sf::RenderWindow &win, int &game_state)
 {
 
 }
