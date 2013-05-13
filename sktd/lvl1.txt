@@ -1,5 +1,10 @@
 xxxxxxxx
+<<<<<<< HEAD
 ##xxxxxx
 x#xBxBxx
 x######x
 xxBxxB#x
+=======
+oooooooo
+xxxxxxxx
+>>>>>>> b53e220505be5828ae5b4bc783bb957fe0e3c0ba

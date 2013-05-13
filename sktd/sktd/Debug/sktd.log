@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿Build started 2013-05-13 19:48:34.
      1>Project "C:\Users\Maciek\Documents\GitHub\sktdr\sktd\sktd\sktd.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
@@ -6,6 +7,23 @@
          All outputs are up-to-date.
        ManifestResourceCompile:
          All outputs are up-to-date.
+=======
+﻿Build started 2013-05-13 17:56:12.
+     1>Project "D:\Studia\Semestr II\PO\sktd\sktd\sktd.vcxproj" on node 2 (Build target(s)).
+     1>InitializeBuildStatus:
+         Creating "Debug\sktd.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         D:\Programy\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ID:\sfml\debug\SFML\include /ZI /nologo /W3 /WX- /Od /Oy- /D SFML_STATIC /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt game_engine.cpp game_window.cpp main.cpp map.cpp
+         game_engine.cpp
+         Generating Code...
+         Compiling...
+         map.cpp
+     1>d:\studia\semestr ii\po\sktd\sktd\map.cpp(54): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\programy\microsoft visual studio 11.0\vc\include\stdio.h(218) : see declaration of 'fopen'
+         main.cpp
+         game_window.cpp
+         Generating Code...
+>>>>>>> b53e220505be5828ae5b4bc783bb957fe0e3c0ba
        Link:
          All outputs are up-to-date.
        Manifest:
@@ -17,4 +35,8 @@
 
 Build succeeded.
 
+<<<<<<< HEAD
 Time Elapsed 00:00:00.37
+=======
+Time Elapsed 00:00:04.76
+>>>>>>> b53e220505be5828ae5b4bc783bb957fe0e3c0ba
