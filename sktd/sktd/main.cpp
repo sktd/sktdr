@@ -1,5 +1,5 @@
 #include "menu.h"
-#include "mobs.h"
+#include "mob.h"
 #include "game_window.h"
 #include "game_engine.h"
 #include <vector>

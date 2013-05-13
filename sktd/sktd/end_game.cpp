@@ -2,7 +2,7 @@
 
 
 menu::end_game::end_game(double px, double py, std::string s):
-	buttons(px, py, s)
+	button(px, py, s)
 {
 }
 

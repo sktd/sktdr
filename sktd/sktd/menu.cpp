@@ -39,8 +39,6 @@ void menu::menu::handling_control(int &game_state)
 		sf::Event ev;
 		while( win.pollEvent( ev ) )
 		{
-			if( ev.type == sf::Event::KeyPressed && ev.key.code == sf::Keyboard::Escape )
-				win.close();
 
 			if( ev.type == sf::Event::KeyPressed && ev.key.code == sf::Keyboard::Down )
 				if(choice!=3)

@@ -1,10 +1,10 @@
 #pragma once
-#include "buttons.h"
+#include "button.h"
 #include <SFML/Graphics.hpp>
 namespace menu
 {
 	class new_game :
-		public buttons
+		public button
 	{
 	public:
 		new_game(double px, double py, std::string s);

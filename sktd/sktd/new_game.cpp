@@ -2,7 +2,7 @@
 
 
 menu::new_game::new_game(double px, double py, std::string s):
-	buttons(px, py, s)
+	button(px, py, s)
 {
 }
 

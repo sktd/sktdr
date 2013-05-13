@@ -1,9 +1,9 @@
 #pragma once
-#include "entities.h"
+#include "drawable.h"
 namespace ent
 {
 	class immovable :
-		public entities
+		public drawable
 	{
 	public:
 		immovable(double px, double py, std::string s);

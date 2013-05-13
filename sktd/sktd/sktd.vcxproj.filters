@@ -18,25 +18,10 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="entities.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="movable.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="immovable.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="mobs.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="projectiles.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="tiles.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="towers.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="game_engine.cpp">
@@ -57,9 +42,6 @@
     <ClCompile Include="player_console.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="buttons.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="new_game.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -69,27 +51,30 @@
     <ClCompile Include="end_game.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="button.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="drawable.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mob.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="projectile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tower.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="entities.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="movable.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="immovable.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="mobs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="projectiles.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="tiles.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="towers.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="game_engine.h">
@@ -110,9 +95,6 @@
     <ClInclude Include="player_console.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="buttons.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="new_game.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -120,6 +102,24 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="end_game.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="button.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="drawable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mob.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="projectile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tower.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

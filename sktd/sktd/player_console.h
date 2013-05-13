@@ -1,6 +1,6 @@
 #pragma once
 #include <SFML/Graphics.hpp>
-#include "towers.h"
+#include "tower.h"
 namespace engine
 {
 	class player_console
@@ -15,9 +15,9 @@ namespace engine
 	private:
 		int lifes;
 		int resources;
-		map::towers tower1;
-		map::towers tower2;
-		map::towers tower3;
+		map::tower tower1;
+		map::tower tower2;
+		map::tower tower3;
 		sf::Text txt1;
 		sf::Text txt2;
 		sf::Text txt3;

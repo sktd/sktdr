@@ -20,7 +20,7 @@
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <CharacterSet>Unicode</CharacterSet>
-    <PlatformToolset>v100</PlatformToolset>
+    <PlatformToolset>v110</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
@@ -52,12 +52,12 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>SFML_STATIC;WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\LIB\SFML\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\sfml\debug\SFML\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>D:\LIB\SFML\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>D:\sfml\debug\SFML\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>sfml-system-s-d.lib;sfml-window-s-d.lib;sfml-graphics-s-d.lib;sfml-main-d.lib;sfml-network-s-d.lib;sfml-audio-s-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -82,42 +82,42 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="buttons.cpp" />
+    <ClCompile Include="button.cpp" />
     <ClCompile Include="continue_game.cpp" />
     <ClCompile Include="end_game.cpp" />
-    <ClCompile Include="entities.cpp" />
+    <ClCompile Include="drawable.cpp" />
     <ClCompile Include="game_engine.cpp" />
     <ClCompile Include="game_window.cpp" />
     <ClCompile Include="immovable.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="map.cpp" />
     <ClCompile Include="menu.cpp" />
-    <ClCompile Include="mobs.cpp" />
+    <ClCompile Include="mob.cpp" />
     <ClCompile Include="movable.cpp" />
     <ClCompile Include="new_game.cpp" />
     <ClCompile Include="player_console.cpp" />
-    <ClCompile Include="projectiles.cpp" />
-    <ClCompile Include="tiles.cpp" />
-    <ClCompile Include="towers.cpp" />
+    <ClCompile Include="projectile.cpp" />
+    <ClCompile Include="tile.cpp" />
+    <ClCompile Include="tower.cpp" />
     <ClCompile Include="window.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="buttons.h" />
+    <ClInclude Include="button.h" />
     <ClInclude Include="continue_game.h" />
     <ClInclude Include="end_game.h" />
-    <ClInclude Include="entities.h" />
+    <ClInclude Include="drawable.h" />
     <ClInclude Include="game_engine.h" />
     <ClInclude Include="game_window.h" />
     <ClInclude Include="immovable.h" />
     <ClInclude Include="map.h" />
     <ClInclude Include="menu.h" />
-    <ClInclude Include="mobs.h" />
+    <ClInclude Include="mob.h" />
     <ClInclude Include="movable.h" />
     <ClInclude Include="new_game.h" />
     <ClInclude Include="player_console.h" />
-    <ClInclude Include="projectiles.h" />
-    <ClInclude Include="tiles.h" />
-    <ClInclude Include="towers.h" />
+    <ClInclude Include="projectile.h" />
+    <ClInclude Include="tile.h" />
+    <ClInclude Include="tower.h" />
     <ClInclude Include="window.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

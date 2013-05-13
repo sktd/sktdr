@@ -1,9 +1,9 @@
 #pragma once
 #include <vector>
-#include "mobs.h"
-#include "projectiles.h"
-#include "towers.h"
-#include "tiles.h"
+#include "mob.h"
+#include "projectile.h"
+#include "tower.h"
+#include "tile.h"
 #include "player_console.h"
 #include <stdio.h>
 #define MAP_NONE -1
@@ -31,16 +31,16 @@ namespace map
 		void move_chosen_r();
 		void move_chosen_l();
 	private:
-		const static int width=16;
-		const static int height=16;
+		const static int width=6;
+		const static int height=3;
 		const static int build=10;
-		std::vector <mobs> mobs_list;
-		std::vector <towers> towers_list;
-		std::vector<mobs>::iterator itm;
-		std::vector<towers>::iterator itt;
-		tiles track[width][height];
-		tiles buildable[build];
-		tiles * chosen;
+		std::vector <mob> mobs_list;
+		std::vector <tower> towers_list;
+		std::vector<mob>::iterator itm;
+		std::vector<tower>::iterator itt;
+		tile track[width][height];
+		tile buildable[build];
+		tile * chosen;
 		sf::Clock clock;
 	};
 }

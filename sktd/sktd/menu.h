@@ -22,7 +22,7 @@ namespace menu
 		sf::Texture selt;
 		sf::Sprite sels;
 		int choice;
-		menu::buttons *chosen;
+		menu::button *chosen;
 		sf::Font font;
 	};
 }
