@@ -15,7 +15,8 @@ menu::end_game::~end_game(void)
 //	win.draw(sp);
 //}
 
-void menu::end_game::push()
+void menu::end_game::push(sf::RenderWindow &win, int &game_state)
 {
-
+	game_state=0;
+	win.close();
 }

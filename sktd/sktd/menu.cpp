@@ -1,17 +1,20 @@
 #include "menu.h"
 
 
-menu::menu::menu(int w, int h, int cd, int style, std::string t, double px, double py1, double py2, double py3, std::string s1, std::string s2, std::string s3, std::string s4):
+menu::menu::menu(int w, int h, int cd, int style, std::string t, double px, double py1, double py2, double py3, std::string s1, std::string s2, std::string s3):
 	window(w, h, cd, style, t),
 	p1(px, py1, s1),
 	p2(px, py2, s2),
 	p3(px, py3, s3)
 {
 	choice=1;
-	ch=&p1;
-	selt.loadFromFile(s4);
-	sels.setTexture(selt);
-	sels.setPosition(px-5,py1-5);
+	chosen=&p1;
+	font.loadFromFile("Andale_Mono.ttf");
+	title.setFont(font);
+	title.setCharacterSize(60);
+	title.setColor(sf::Color::White);
+	title.setString("SK Tower Defense");
+	title.setPosition(140,10);
 }
 
 
@@ -21,17 +24,18 @@ menu::menu::~menu(void)
 
 void menu::menu::display(){
 	win.clear(sf::Color::Black);
-	win.draw(sels);
 	p1.draw(win);
 	p2.draw(win);
 	p3.draw(win);
+	win.draw(title);
+	(*chosen).draw2(win);
 	win.display();
 }
 
-void menu::menu::navigate(/*sf::RenderWindow &win*/)
+void menu::menu::handling_control(int &game_state)
 {
-	while(win.isOpen())
-	{
+//	while(win.isOpen())
+//	{
 		sf::Event ev;
 		while( win.pollEvent( ev ) )
 		{
@@ -51,23 +55,20 @@ void menu::menu::navigate(/*sf::RenderWindow &win*/)
 					choice=3;
 			
 			if( ev.type == sf::Event::KeyPressed && ev.key.code == sf::Keyboard::Return )
-				(*ch).push();
+				chosen->push(win, game_state);
 
 			switch(choice){
 			case 1:
-				ch=&p1;
-				sels.setPosition(p1.get_pos_x()-5,p1.get_pos_y()-5);
+				chosen=&p1;
 				break;
 			case 2:
-				ch=&p2;
-				sels.setPosition(p2.get_pos_x()-5,p2.get_pos_y()-5);
+				chosen=&p2;
 				break;
 			case 3:
-				ch=&p3;
-				sels.setPosition(p3.get_pos_x()-5,p3.get_pos_y()-5);
+				chosen=&p3;
 				break;
 			}
 		}
 		display();
-	}
+	//}
 }

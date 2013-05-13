@@ -1,3 +1,5 @@
 xxxxxxxx
-oooooooo
-xxxxxxxo
+##xxxxxx
+x#xBxBxx
+x######x
+xxBxxB#x
