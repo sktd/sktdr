@@ -12,11 +12,11 @@ namespace engine
 		game_window(int w, int h, int cd, int style, std::string t);
 		~game_window(void);
 		void display();
-		map::map map1;
-		player_console console;
 		void handling_control(int &game_state);
 	private:
 		sf::Clock clock;
+		map::map map1;
+		player_console console;
 	};
 }
 

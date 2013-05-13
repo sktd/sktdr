@@ -2,19 +2,21 @@
 
 map::map::map(void)
 {
-	int x=100;
-	for(int i=0;i<width*height;i++){
-		tiles *wsk=new tiles(x,200, "tor1.bmp",1);
-		track[i]=*wsk;
-		x+=30;
-	}
+	//int x=100;
+	//for(int i=0;i<width*height;i++){
+	//	tiles *wsk=new tiles(x,200, "tor1.bmp",1);
+	//	track[i]=*wsk;
+	//	x+=30;
+	//}
 
-	int x2=120;
-	for(int i=0;i<build;i++){
-		tiles *wsk=new tiles (x2,150, "tor2.bmp",2);
-		buildable[i]=*wsk;
-		x2+=40;
-	}
+	//int x2=120;
+	//for(int i=0;i<build;i++){
+	//	tiles *wsk=new tiles (x2,150, "tor2.bmp",2);
+	//	buildable[i]=*wsk;
+	//	x2+=40;
+	//}
+	
+	load_level("lvl1.txt");
 	
 	chosen=buildable;
 }
@@ -45,8 +47,74 @@ void map::map::end_wave()
 
 }
 
-void map::map::load_level(){
+bool map::map::load_level(const char *filename){
+	// -1 == 0xffffffff -> 0xff
+ // memset(track, 0xff, sizeof(track));
 
+  FILE *f = fopen(filename, "r");
+  if(!f) { fprintf(stderr, "error: could not open map file \"%s\"\n", filename);
+    return false;
+  }
+
+  for(int j = 0; j < 16; j++) {
+    char line[64];
+    fgets(line, sizeof(line), f);
+    if(feof(f)) {
+      fprintf(stderr, "error: unexpected end of file \"%s\"\n",
+          filename);
+      fclose(f);
+      return false;
+    }
+	int x=100;
+	int y=100;
+	tiles *wsk;
+    for(int i = 1; i < 16; i++) {
+      switch(line[i]) {
+        case ' ':	
+			wsk=new tiles(x,y, "tor1.bmp",1); //tu mozna dac jakies inne tekstury zeby zobaczyc czy to dziala jak powinno, mialem ale mi skasowal git...
+					wsk->set_type(MAP_NONE);
+					 track[i] = *wsk; 
+					 x+=30;
+					 y+=30;
+					  delete wsk;
+					  break;
+        case '#': 	
+			wsk=new tiles(x,y, "tor1.bmp",1);
+					wsk->set_type(MAP_ROAD);
+					 track[i] = *wsk; 
+					 x+=30;
+					 y+=30;
+					 delete wsk;
+					 break;
+        case 'X': 	
+			wsk=new tiles(x,y, "tor1.bmp",1);
+					wsk->set_type(MAP_GRASS);
+					 track[i] = *wsk; 
+					 x+=30;
+					 y+=30;
+					  delete wsk;
+					 break;
+        case 'B': 	
+			wsk=new tiles(x,y, "tor1.bmp",1);
+					wsk->set_type(MAP_BUILDABLE);
+					 track[i] = *wsk; 
+					 x+=30;
+					 y+=30;  
+					  delete wsk;
+			break;
+        default:
+          fprintf(stderr, "error: unknown map character \"%c\" in \"%s\"\n",
+              line[i], filename);
+          fclose(f);
+          return false;
+      }
+    }
+  }
+ 
+  printf("info: loaded map \"%s\"\n", filename);
+
+  fclose(f);
+  return true;
 }
 
 void map::map::build_tower(std::string s, double spd, int cst, engine::player_console &console){

@@ -32,7 +32,7 @@ void map::towers::draw(sf::RenderWindow &win)
 
 void map::towers::fire()
 {
-	if(clock.getElapsedTime().asMicroseconds()==100000){
+	if(clock.getElapsedTime().asMicroseconds()==1000000){
 		itp=projectiles_list.begin();
 		projectiles *wsk=new projectiles(pos_x+5, pos_y+5, "pocisk.png", 0.1,3,3);
 		projectiles_list.insert(itp, *wsk);
