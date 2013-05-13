@@ -33,12 +33,12 @@ void map::map::begin_wave(double px, double py, std::string s, double vel, doubl
 		mob *wsk=new mob(px, py, s, vel, hlth, wrth);
 		mobs_list.insert(itm, *wsk);
 	}
-	int x=0;
+	int x=180;
 	itm=mobs_list.begin();
 	while(itm!=mobs_list.end()){
 			(*itm).move(x,0);
 			++itm;
-			x+=30;
+			x+=TEX_SIZE;
 	}
 }
 
@@ -54,7 +54,7 @@ bool map::map::load_level(const char *filename){
 		return false;
 	}
 
-	int x=100;
+	int x=MARGIN;
 	int y=100;
 	for(int j = 0; j < width; j++) {
 		char line[64];
@@ -68,32 +68,25 @@ bool map::map::load_level(const char *filename){
 
     for(int i = 0; i < height; i++) {
       switch(line[i]) {
-        case ' ':	
-			wsk=new tile(x,y,"tor1.png",MAP_NONE);
-					 track[j][i] = *wsk; 
-					x+=30;
-
-					  delete wsk;
-					  break;
         case '#': 	
-			wsk=new tile(x,y,"tor1.png",MAP_ROAD);
+			wsk=new tile(x,y,"road.png",MAP_ROAD);
 					 track[j][i] = *wsk; 
-					 x+=30;
-
-					 delete wsk;
+					 x+=TEX_SIZE;
 					 break;
         case 'X': 	
-			wsk=new tile(x,y,"tor1.png",MAP_GRASS);
+			wsk=new tile(x,y,"grass.png",MAP_GRASS);
 					 track[j][i] = *wsk; 
-					 x+=30;
-
-					 delete wsk;
+					 x+=TEX_SIZE;
 					 break;
         case 'B': 	
-			wsk=new tile(x,y,"tor1.png",MAP_BUILDABLE);
+			wsk=new tile(x,y,"build.png",MAP_BUILDABLE);
 					 track[j][i] = *wsk; 
-					 x+=30;
-					 delete wsk;
+					 x+=TEX_SIZE;
+					 break;
+		case 'O': 	
+			wsk=new tile(x,y,"gate.png",MAP_GATE);
+					 track[j][i] = *wsk; 
+					 x+=TEX_SIZE;
 					 break;
 		default:
           fprintf(stderr, "error: unknown map character \"%c\" in \"%s\"\n",
@@ -103,7 +96,8 @@ bool map::map::load_level(const char *filename){
 		  break;
       }
     }
-	y+=40;
+	x=MARGIN;
+	y+=TEX_SIZE;
 
   }
  

@@ -10,6 +10,9 @@
 #define MAP_ROAD 1
 #define MAP_GRASS 2
 #define MAP_BUILDABLE 3
+#define MAP_GATE 4
+#define MARGIN 180
+#define TEX_SIZE 50
 
 
 namespace map
@@ -31,8 +34,8 @@ namespace map
 		void move_chosen_r();
 		void move_chosen_l();
 	private:
-		const static int width=6;
-		const static int height=3;
+		const static int width=8;
+		const static int height=8;
 		const static int build=10;
 		std::vector <mob> mobs_list;
 		std::vector <tower> towers_list;
